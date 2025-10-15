@@ -1,0 +1,406 @@
+/* @ main page  */
+* {
+    font-family: "Noto Sans Arabic", sans-serif;
+}
+
+body {
+    background-color: #f2eeef;
+    padding: 0;
+    margin: 0;
+}
+
+/* ? display of content */
+.mainPaper {
+    /* display: none; */
+    size: A4;
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+    max-height: 297mm;
+    background-image: url("../img/new\ company\ paper\ diffWm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-print-color-adjust: exact;
+    /* img/new company paper diffWm.jpg */
+}
+
+.paperCont {
+    display: grid;
+    padding: 3.5cm 5mm;
+}
+
+.titleCont,
+.sendToCont,
+.greetCont,
+.messCont,
+.closingCont,
+.stampCont {
+    display: flex;
+    padding: 0;
+}
+
+/* ? directions and other style */
+.titleCont {
+    justify-content: center;
+}
+
+.sendToCont {
+    justify-content: right;
+}
+
+.greetCont {
+    justify-content: center;
+}
+
+.messCont {
+    justify-content: right;
+}
+
+.closingCont {
+    justify-content: left;
+    padding-left: 25px;
+}
+
+.stampCont {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* .titleCont h1 {
+    font-weight: 900;
+    font-size: 85px;
+}
+
+.sendToCont h2 {
+    font-weight: 900;
+    font-size: 50px;
+    text-align: right;
+}
+
+.greetCont h3 {
+    font-weight: 900;
+    font-size: 45px;
+}
+
+.messCont p {
+    font-weight: 500;
+    font-size: 37px;
+    text-align: right;
+}
+
+.closingCont h3 {
+    font-weight: 900;
+    font-size: 45px;
+}
+*/
+
+.legalizations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    margin-top: 1vh;
+    font-size: 17px;
+    height: 35px;
+    width: 75px;
+}
+
+.mainCont h4 {
+    margin: 1vh 0;
+    font-size: 23px;
+    text-align: center;
+    color: #353B3C;
+}
+
+.mainCont h5 {
+    margin: 1vh 0;
+    font-size: 19px;
+    color: #846A6A;
+}
+
+.mainCont .checkBoxes h5 {
+    width: fit-content;
+    text-align: right;
+}
+
+button:last-of-type {
+    height: auto;
+    margin: 1vh auto;
+    padding: 10px 5px;
+    background-color: #353B3C;
+    color: #EEF0F2;
+    font-weight: 900;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px;
+}
+
+.checkBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: fit-content;
+    height: 7vh;
+    align-items: center;
+}
+
+.checkBoxes input {
+    width: 3.5vw;
+    margin-right: 5vw;
+}
+
+
+/*
+body *{
+    display: none;
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0;
+        padding: 0;
+    }  .mainPaper {
+        display: block;
+        width: 210mm;
+        height: 297mm;
+        -webkit-print-color-adjust: exact;
+    }*/
+
+/* @ main app */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.mainCont {
+    display: grid;
+    /* justify-items: center; */
+    align-items: center;
+    min-height: 91vh;
+}
+
+.textarea {
+    display: block;
+    width: 77vw;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+    min-height: 5vh;
+    line-height: 2vh;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #353B3C;
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 1vh 1vw;
+    margin-bottom: 0.5vh;
+    border-radius: 21px;
+    -webkit-border-radius: 21px;
+    -moz-border-radius: 21px;
+    -ms-border-radius: 21px;
+    -o-border-radius: 21px;
+}
+
+*::selection {
+    background-color: #353B3C;
+}
+
+.textarea:hover,
+.textarea::selection,
+textarea:active {
+    border: none;
+    outline: none;
+}
+
+
+/* secuirty */
+
+.weakPass {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #EEF0F2;
+    z-index: 100;
+}
+
+.weakQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 65vw;
+    height: 30vh;
+    max-width: 350px;
+    background: #353B3C;
+    z-index: 101;
+    border-radius: 20px;
+}
+
+.weakQ h3 {
+    color: #EEF0F2;
+    font-size: 21px;
+}
+
+.weakQ #passValue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEF0F2;
+    width: 60%;
+    height: 3vh;
+    padding: 5px 10px;
+    margin-bottom: 2vh;
+    text-align: center;
+    outline: none;
+    color: #373A40;
+    font-size: 2vh;
+    overflow: hidden;
+    font-weight: 900;
+    resize: none;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
+
+.weakQ #passBtn {
+    background: #EEF0F2;
+    color: #353B3C;
+    border: none;
+    margin-bottom: 1.5vh;
+}
+
+/* responsive desgin */
+@media (max-width: 320px) {
+    .mainCont h5 {
+        font-size: 14px;
+    }
+}
+
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    /* Not removed via appearance */
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: auto 4vw;
+    color: currentColor;
+    border: none;
+    height: 4vh;
+    width: 4vh;
+    font: inherit;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    -webkit-transform: translateY(-0.075em);
+    -moz-transform: translateY(-0.075em);
+    -ms-transform: translateY(-0.075em);
+    -o-transform: translateY(-0.075em);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.form-control+.form-control {
+    margin-top: 1em;
+}
+
+input[type="checkbox"] {
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.5vh;
+    height: 1.5vh;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]::before {
+    /* ...existing styles */
+
+    /* Windows High Contrast Mode */
+    background-color: #846A6A;
+}
+
+input[type="checkbox"]::before {
+    /* ...existing styles */
+
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .mainPaper {
+        visibility: visible;
+        print-color-adjust: exact;
+        display: flex !important;
+        justify-content: center;
+        align-items: start;
+        page-break-after: avoid;
+        page-break-before: avoid;
+        width: 21cm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .mainPaper * {
+        visibility: visible;
+    }
+
+    body :not(.mainPaper *) {
+        display: none;
+    }
+
+    .mainPaper img {
+        image-rendering: pixelated;
+    }
+
+    .theContent {
+        flex: 1;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .mainPaper {
+        padding: 10mm 5mm 5mm;
+    }
+}

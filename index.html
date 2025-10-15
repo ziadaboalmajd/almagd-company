@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-language" content="ar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&family=Tajawal:wght@200;300;400;500;700;800;900&family=Ubuntu:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Almagd</title>
+  </head>
+
+  <body>
+    <div class="weakPass" id="weakPass">
+      <div class="weakQ">
+        <h3>كلمة السر</h3>
+        <textarea id="passValue"></textarea>
+        <button id="passBtn">دخول</button>
+      </div>
+    </div>
+    <div>
+      <h1 style="text-align: center">شركة المجد</h1>
+      <main>
+        <div class="mainCont">
+          <h4>عنوان</h4>
+          <!-- ? auto resize alt input -->
+          <span
+            class="textarea"
+            role="textbox"
+            id="titleCont"
+            contenteditable
+          ></span>
+          <h4>مرسل الي</h4>
+          <!-- ? auto resize alt input -->
+          <span
+            class="textarea"
+            role="textbox"
+            id="sendToCont"
+            contenteditable
+          ></span>
+          <div class="checkBoxes">
+            <h5>التحية</h5>
+            <input type="checkbox" id="greetC" value="True" checked />
+          </div>
+          <h4>المضمون</h4>
+          <!-- ? auto resize alt input -->
+          <span
+            class="textarea"
+            role="textbox"
+            id="messCont"
+            contenteditable
+          ></span>
+          <div class="checkBoxes">
+            <h5>الخاتمة</h5>
+            <input type="checkbox" id="closingC" value="True" checked />
+          </div>
+          <div class="checkBoxes">
+            <h5>الختم</h5>
+            <input type="checkbox" id="stampC" value="True" />
+          </div>
+          <div class="checkBoxes">
+            <h5>امضاء احمد</h5>
+            <input type="checkbox" id="ahmC" value="True" />
+          </div>
+          <div class="checkBoxes">
+            <h5>امضاء صاحبة الشركة</h5>
+            <input type="checkbox" id="amlC" value="True" />
+          </div>
+          <button id="generate">انشاء</button>
+        </div>
+      </main>
+    </div>
+    <div class="mainPaper" style="display: none">
+      <img
+        src="./img/new company paper diffWm.jpg"
+        alt="paper"
+        style="width: 21cm; display: inline; position: absolute; z-index: -1"
+      />
+      <div class="theContent">
+        <div class="paperCont">
+          <div class="titleCont">
+            <h1
+              class="titleContf"
+              style="
+                text-decoration: underline;
+                text-align: center;
+                font-weight: 900;
+                font-size: 5.5mm;
+                font-family: 'Noto Sans Arabic', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                max-height: 10mm;
+                overflow: hidden;
+                margin: 2m 0;
+              "
+            ></h1>
+            <!-- /* word-wrap: break-word;
+                    word-break: break-all; */ -->
+          </div>
+          <div class="sendToCont">
+            <h2
+              class="sendToContf"
+              style="
+                font-weight: 900;
+                font-size: 5mm;
+                text-align: right;
+                font-family: 'Noto Sans Arabic', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                overflow: hidden;
+                margin: 2m 0;
+              "
+            ></h2>
+          </div>
+          <div class="greetCont">
+            <h3
+              class="greetContf"
+              style="
+                text-align: center;
+                font-weight: 900;
+                font-size: 4.5mm;
+                font-family: 'Noto Sans Arabic', sans-serif;
+              "
+            >
+              تحية طيبة وبعد
+            </h3>
+          </div>
+          <div class="messCont">
+            <pre
+              class="messContf"
+              style="
+                font-weight: 500;
+                font-size: 5mm;
+                text-align: right;
+                font-family: 'Noto Sans Arabic', sans-serif;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
+                margin: 2m 0;
+              "
+            ></pre>
+          </div>
+          <div class="closingCont">
+            <h3
+              style="
+                text-align: left;
+                font-weight: 900;
+                font-size: 4.5mm;
+                font-family: 'Noto Sans Arabic', sans-serif;
+              "
+            >
+              وتقبلوا فائق الاحترام
+            </h3>
+          </div>
+          <div class="stampCont">
+            <div class="legalizations">
+              <img
+                class="stampC"
+                src="img/001__2_-removebg-preview.png"
+                style="width: 59mm"
+                alt=""
+              />
+              <img
+                class="amlC"
+                src="img/امضاء__2_-removebg-preview.png"
+                style="width: 47mm"
+                alt=""
+              />
+              <img
+                class="ahmC"
+                src="img/photo_2022-10-27_01-50-10-removebg-preview.png"
+                style="width: 41mm"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+  </body>
+</html>
+
+<!-- <h5>عنوان</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>مرسل الي</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>التحية</h5>
+<input type="checkbox" id="greetC" value="True">
+<h5>المضمون</h5>
+<textarea type="text" id="jobinput"></textarea>
+<h5>الخاتمة</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>الختم</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>امضاء احمد</h5>
+<input type="checkbox" id="closingC" value="True">
+<h5>امضاء صاحبة الشركة</h5>
+<input type="checkbox" id="closingC" value="True">
+<button id="generate">انشاء</button> -->
+
+<!-- <div class="paperCont">
+    <div class="titleCont">
+        <h1 style="text-decoration: underline;">اعتذار</h1>
+    </div>
+    <div class="sendToCont">
+        <h2>السادة/شركه المشروعات البترولية والاستشارات الفني بترو جيت</h2>
+    </div>
+    <div class="greetCont">
+        <h3>تحية طيبه وبعد</h3>
+    </div>
+    <div class="messCont">
+        <p>نعتذر عن الاشتراك في عملية 4425/mdk/22 حيث اننا سنقوم بالاشتراك في
+            عملية 4391/mdk/22 الثلاثاء ٢٠٢٢ / ١١ /</p>
+    </div>
+    <div class="closingCont">
+        <h3>وتقبلوا فائق الاحترا م</h3>
+    </div>
+    <div class="stampCont">
+        <div class="legalizations">
+            <img src="img/001__2_-removebg-preview.png" style="width: 510px;" alt="">
+            <img src="img/photo_2022-10-27_01-50-10-removebg-preview.png" style="width: 410px;" alt="">
+        </div>
+    </div>
+</div> -->
